@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Multi-page template</title>
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css" />
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/indexform.js"></script>
+</head>
+
+
+<body>
+
+<!-- Start of first page: #one -->
+<div data-role="page" id="one">
+
+	<div data-role="header">
+		<h1>Age Day Transformer</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" >
+        <form id="dayTransform">
+		<h2>Please enter the following</h2>
+
+		 <div id="formDetail">
+                    <div class="ui-field-contain">
+                         <label for="firstName">First Name</label>
+                         <input type="text" name="firstName" id="firstName">
+   
+                    </div>
+                    <div class="ui-field-contain">
+                         <label for="lastName">Last Name</label>
+                         <input type="text" name="lastName" id="lastName">
+                    </div>
+                    <div class="ui-field-contain">
+                         <label for="birthDate">Your Birthday</label>
+                        <input type="date" data-role="date" data-inline="true" name="birthDate" id="birthDate">
+                    </div>
+                    
+                     
+                   
+        </div> 
+         <p>
+            <button type="submit" data-role="button">Show Your Age in days</button>
+        </p>
+        </form>
+		
+	</div><!-- /content -->
+
+	<div data-role="footer" data-theme="d">
+		<h4>Doaa Elfayoumi - Computer Application Development</h4>
+	</div><!-- /footer -->
+</div><!-- /page one -->
+
+
+<!-- Start of second page: #two -->
+ <div data-role="page" id="two" data-theme="a">
+
+	<div data-role="header">
+		<h1>Result</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="a">
+		<h2>Result</h2>
+		<p id="result"></p>
+		<p><a href="#one" data-direction="reverse" data-role="button" data-theme="b">Back to Homepage</a></p>
+
+	</div><!-- /content -->
+
+	<div data-role="footer" data-theme="d">
+		<h4>Doaa Elfayoumi - Computer Application Development</h4>
+	</div><!-- /footer -->
+</div><!-- /page two -->
+
+
+
+</body>
+</html>
