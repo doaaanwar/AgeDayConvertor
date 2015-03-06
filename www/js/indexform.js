@@ -57,9 +57,9 @@ var app = {
     
     resetForm: function()
     {
-        jQuery("#firstName") = "";
-        jQuery("#lastName") = "";
-        jQuery("#birthDate") = "";
+        jQuery("#firstName").val("");
+        jQuery("#lastName").val("");
+        jQuery("#birthDate").val("");
     },
     // Bind Event Listeners
     //
