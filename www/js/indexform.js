@@ -60,7 +60,7 @@ var app = {
         jQuery("#firstName") = "";
         jQuery("#lastName") = "";
         jQuery("#birthDate") = "";
-    }
+    },
     // Bind Event Listeners
     //
     // Bind any events that are required on startup. Common events are:
