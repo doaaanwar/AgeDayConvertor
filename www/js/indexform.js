@@ -36,7 +36,7 @@ var app = {
         var todayDate = new Date();
             
         var diff = this.calculate(birthDate,todayDate);
-        jQuery("#result").html("Hello "+jQuery("#firstName").val()+" "+jQuery("#lastName").val()+"</br> Your age in days is: "+diff);
+        jQuery("#result").html("Hello "+jQuery("#firstName").val()+" "+jQuery("#lastName").val()+"</br> Your age in days is: "+diff+ " days");
         return false;
     },
     //function that calculate the difference by day etween two dates
