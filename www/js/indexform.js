@@ -20,7 +20,9 @@ var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
+        
         jQuery(document).on("submit", "#dayTransform", jQuery.proxy(this.calculateTheDifference, this));
+        jQuery(document).on("click", "#resetBtn", jQuery.proxy(this.resetForm, this));
     },
 
    
@@ -32,7 +34,7 @@ var app = {
         var birthDate = new Date(jQuery("#birthDate").val());
            
         var todayDate = new Date();
-            //jQuery..datepicker.formatDate('yyyy-mm-dd', new Date());
+            
         var diff = this.calculate(birthDate,todayDate);
         jQuery("#result").html("Hello "+jQuery("#firstName").val()+" "+jQuery("#lastName").val()+"</br> Your age in days is: "+diff);
         return false;
@@ -52,6 +54,13 @@ var app = {
       // Convert back to days and return
       return Math.round(difference_ms/one_day); 
     },
+    
+    resetForm: function()
+    {
+        jQuery("#firstName") = "";
+        jQuery("#lastName") = "";
+        jQuery("#birthDate") = "";
+    }
     // Bind Event Listeners
     //
     // Bind any events that are required on startup. Common events are:
