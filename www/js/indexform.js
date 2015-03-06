@@ -20,13 +20,9 @@ var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
-        //jQuery(document).on("pagecreate", jQuery.proxy(this.headerAndFooter, this));
         jQuery(document).on("submit", "#dayTransform", jQuery.proxy(this.calculateTheDifference, this));
     },
-   headerAndFooter: function (event) {
-        var sId = event.target.id;
-        jQuery("#" + sId).append('<footer><p>&copy;&nbsp;Copyright ' + new Date().getFullYear() + '&nbsp;Doaa Elfayoumi.</p></footer>');
-    },
+
    
     calculateTheDifference: function(){
         jQuery.mobile.changePage("#two", {
@@ -41,6 +37,7 @@ var app = {
         jQuery("#result").html("Hello "+jQuery("#firstName").val()+" "+jQuery("#lastName").val()+"</br> Your age in days is: "+diff);
         return false;
     },
+    //function that calculate the difference by day etween two dates
      calculate: function( date1, date2 ) {
       //Get 1 day in milliseconds
       var one_day=1000*60*60*24;
